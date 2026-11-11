@@ -13,7 +13,7 @@ jobs:
   review:
     uses: Zhangjinkai123/ai-code-reviewer/.github/workflows/reusable-review.yml@6cc7512f36507e5d76ad478ea75fdd22dc58593f
     with:
-      base-url: https://api.hualong-ai.com/v1
+      base-url: http://127.0.0.1:1/v1
       model: gpt-6.1-sol
     secrets:
       api-key: ${{ secrets.CR_API_KEY }}
