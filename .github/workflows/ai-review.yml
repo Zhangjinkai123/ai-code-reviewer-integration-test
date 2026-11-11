@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   review:
-    uses: Zhangjinkai123/ai-code-reviewer/.github/workflows/reusable-review.yml@54c1b8e43de314db00db7779dfe268a5a21e4eb1
+    uses: Zhangjinkai123/ai-code-reviewer/.github/workflows/reusable-review.yml@6cc7512f36507e5d76ad478ea75fdd22dc58593f
     with:
       base-url: https://api.hualong-ai.com/v1
       model: gpt-6.1-sol

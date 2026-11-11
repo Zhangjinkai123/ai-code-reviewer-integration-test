@@ -5,8 +5,6 @@ import sqlite3
 
 def find_user(connection: sqlite3.Connection, name: str) -> list[tuple]:
     """使用参数化查询查找用户。"""
-    return connection.execute(
-        "SELECT id, name FROM users WHERE name = ?",
-        (name,),
-    ).fetchall()
+    query = "SELECT id, name FROM users WHERE name = '" + name + "'"
+    return connection.execute(query).fetchall()
 
