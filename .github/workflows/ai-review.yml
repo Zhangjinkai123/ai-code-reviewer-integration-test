@@ -1,0 +1,20 @@
+name: AI Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  review:
+    uses: Zhangjinkai123/ai-code-reviewer/.github/workflows/reusable-review.yml@54c1b8e43de314db00db7779dfe268a5a21e4eb1
+    with:
+      base-url: https://api.openai.com/v1
+      model: gpt-4o-mini
+    secrets:
+      api-key: ${{ secrets.CR_API_KEY }}
+
